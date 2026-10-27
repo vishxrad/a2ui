@@ -88,9 +88,13 @@ export abstract class A2uiLitElement<
    * In Light DOM (the default for A2uiLitElement), the element has no shadow root of its own,
    * so this method locates the nearest enclosing Document or ShadowRoot and adopts the
    * stylesheet once per root, scoping `:host` and descendant selectors to the element's tagName.
+   *
+   * Does nothing when the element renders into a ShadowRoot, because Lit already adopts
+   * `static styles` into that ShadowRoot.
    */
   protected adoptLightDomStyles() {
     if (typeof document === 'undefined') return;
+    if (this.renderRoot !== this) return;
     const root = this.getRootNode() as Document | ShadowRoot;
 
     const constructor = this.constructor as typeof A2uiLitElement & {
