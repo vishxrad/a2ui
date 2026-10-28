@@ -28,5 +28,6 @@ export {
   type CallMcpToolOptions,
   type McpAppResourcePayload,
   type McpClientResolver,
+  type McpToolDataPayload,
   type McpToolClient,
 } from './functions/callMcpTool.js';
