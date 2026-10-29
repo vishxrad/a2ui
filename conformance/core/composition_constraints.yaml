@@ -79,7 +79,7 @@
         code: "UNALLOWED_PARENT"
         surfaceId: "s1"
     rendererError:
-      version: "v1.0"
+      version: "1.0"
       error:
         code: "UNALLOWED_PARENT"
         surfaceId: "s1"
@@ -89,7 +89,7 @@
 - name: test_composition_unallowed_parent_root_error
   description: Verifies validation error thrown when root component does not allow Surface as its implicit parent.
   catalog:
-    protocolVersion: "v1.0"
+    protocolVersion: "1.0"
     catalogSchema:
       catalogId: "custom"
       components:
@@ -98,7 +98,7 @@
   action: validate
   steps:
     - payload:
-        - version: "v1.0"
+        - version: "1.0"
           createSurface:
             surfaceId: "s1"
             catalogId: "custom"
@@ -116,7 +116,7 @@
         code: "UNALLOWED_PARENT"
         surfaceId: "s1"
     rendererError:
-      version: "v1.0"
+      version: "1.0"
       error:
         code: "UNALLOWED_PARENT"
         surfaceId: "s1"
@@ -161,7 +161,7 @@
         code: "UNALLOWED_CHILD"
         surfaceId: "s1"
     rendererError:
-      version: "v1.0"
+      version: "1.0"
       error:
         code: "UNALLOWED_CHILD"
         surfaceId: "s1"
